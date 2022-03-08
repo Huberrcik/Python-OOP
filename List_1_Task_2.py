@@ -19,8 +19,6 @@ class Coin:
         print(self.side)
 
 
-def checkcondition():
-
 if __name__ == '__main__':
 
     coin1zl = Coin()
