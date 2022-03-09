@@ -1,3 +1,12 @@
+"""
+1. Create Coin class
+2. Non-parametrized constructor should create {side} of coin
+3. Method throw() - randomly changes side of coin
+4. Method show_side() returns side of Coin
+5. Create several Coin objects and evoke their methods to simulate 15 coin flips
+6. 100 simulations of hazard game
+"""
+
 import random
 
 
@@ -6,8 +15,8 @@ class Coin:
     def __init__(self):
         print("utworzono monete")
         self.side = "orzel"
-    # function that change side of coin
 
+    # function that change side of coin
     def throw(self):
         x = random.randint(1, 2)
         print(x)
@@ -18,7 +27,7 @@ class Coin:
 
     # function that shows current side of coin
     def show_side(self):
-        print(self.side)
+        return Coin.side
 
 
 if __name__ == '__main__':
