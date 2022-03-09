@@ -27,7 +27,7 @@ class Coin:
 
     # function that shows current side of coin
     def show_side(self):
-        return Coin.side
+        print(self.side)
 
 
 if __name__ == '__main__':
@@ -63,37 +63,22 @@ if __name__ == '__main__':
             if coin1zl.side == "orzel":
                 saldo += 1
                 print(f"Wypadl orzel 1zl, saldo = {saldo}")
-                # second condition breaks loop and shows winning message if {saldo} equals 20
-                if saldo == 20:
-                    print(f"saldo = {saldo}, wygrales!")
-                    wygrane += 1
-                    break
-                    # last condition, breaks loop and shows loosing message if {saldo} is greater than 20
-                elif saldo > 20:
-                    print(f"saldo = {saldo}, przegrales :(")
-                    przegrane += 1
-                    break
             if coin2zl.side == "orzel":
                 saldo += 2
-                print(f"Wypadl orzel 2zl, saldo = {saldo}")
-                if saldo == 20:
-                    print(f"saldo = {saldo}, wygrales!")
-                    wygrane += 1
-                    break
-                elif saldo > 20:
-                    print(f"saldo = {saldo}, przegrales :(")
-                    przegrane += 1
-                    break
             if coin5zl.side == "orzel":
                 saldo += 5
-                print(f"Wypadl orzel 5zl, saldo = {saldo}")
-                if saldo == 20:
-                    print(f"saldo = {saldo}, wygrales!")
-                    wygrane += 1
-                    break
-                elif saldo > 20:
-                    print(f"saldo = {saldo}, przegrales :(")
-                    przegrane += 1
-                    break
+
+            # second condition breaks loop and shows winning message if {saldo} equals 20
+            print(f"Wypadl orzel 2zl, saldo = {saldo}")
+            if saldo == 20:
+                print(f"saldo = {saldo}, wygrales!")
+                wygrane += 1
+                break
+            # third condition breaks loop and shows loosing message if {saldo} is greater than 20
+            elif saldo > 20:
+                print(f"saldo = {saldo}, przegrales :(")
+                przegrane += 1
+                break
+    # printing amount of wins and looses
     print(f"wygrane = {wygrane}")
     print(f"przegrane = {przegrane}")
